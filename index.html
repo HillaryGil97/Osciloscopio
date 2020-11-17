@@ -7,6 +7,88 @@
     <title>Osciloscopio</title>
 </head>
 <body>
-    
+    <div class="container" id="visual">
+        <div id="display">
+            <img src="/images/dev/display.png" alt="">
+        </div>
+        <div id="comproFunc">
+            <img src="/images/dev/funciones.png" alt="">
+        </div>
+    </div>
+    <div class="container" id="control">
+        <div class="row" id="ajusBasic">
+            <div class="col">
+                <a href="#">Power</a>
+                <a href="#">AutoSet</a>
+            </div>
+            <div class="col">
+                <form action="">
+                    <label>Intens</label>
+                    <input name="browser" id="browser">
+                    <datalist id="intensity">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    </datalist>
+                </form>
+                <form action="">
+                    <label>Focus</label>
+                    <input name="browser" id="browser">
+                    <datalist id="focus">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    </datalist>
+                </form>
+            </div>      
+        </div>
+        <div class="row" id="poSignal">
+            <div class="col" id="posY">
+                <form action="/action_page.php">
+                    <label for="fname">Y POS 1</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+                <form action="/action_page.php">
+                    <label for="fname">Y POS 2</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+            </div>
+            <div class="col" id="posX">
+                <form action="/action_page.php">
+                    <label for="fname">X POS</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+            </div>
+        </div>
+        <div class="row" id="properties">
+            <div class="col">
+                <form action="/action_page.php">
+                    <label for="fname">VOLTS/DIV CH1</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+            </div>
+            <div class="col">
+                <form action="/action_page.php">
+                    <label for="fname">VOLTS/DIV CH2</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+            </div>
+            <div class="col">
+                <form action="/action_page.php">
+                    <label for="fname">TIME/DIV</label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+            </div>
+        </div>
+        <div class="row" id="conexion">
+            <img src="/images/dev/entradas.png" alt="">
+        </div>
+    </div>
 </body>
 </html>
+
+<!--https://www.tel.uva.es/personales/lib/osciloscopio.html-->

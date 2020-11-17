@@ -1,0 +1,33 @@
+#control{
+    padding: 1%;
+    width: 60%;
+    background-color: $fondo_container;
+    align-content: space-around;
+    .row{
+        padding: 2%;
+    }
+    #ajusBasic{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4%;
+        background-color:$fondo_row;
+    }
+    #poSignal{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4%;
+        background-color: $fondo_row;
+    }
+    #properties{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4%;
+        background-color: $fondo_row;
+    }
+    #conexion{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
