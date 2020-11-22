@@ -9,7 +9,7 @@
 <body>
     <div class="container" id="visual">
         <div id="display">
-            <img src="/images/dev/display.png" alt="">
+            <canvas id="draw" width="450" height="410"></canvas>
         </div>
         <div id="comproFunc">
             <img src="/images/dev/funciones.png" alt="">
@@ -18,8 +18,8 @@
     <div class="container" id="control">
         <div class="row" id="ajusBasic">
             <div class="col">
-                <a href="#">Power</a>
-                <a href="#">AutoSet</a>
+                <input name="power" type="submit" value="Power">
+                <input name="auto" type="submit" value="AutoSet">
             </div>
             <div class="col">
                 <form action="">
@@ -50,17 +50,17 @@
             <div class="col" id="posY">
                 <form action="/action_page.php">
                     <label for="fname">Y POS 1</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="yPos1">
                 </form>
                 <form action="/action_page.php">
                     <label for="fname">Y POS 2</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="yPos2">
                 </form>
             </div>
             <div class="col" id="posX">
                 <form action="/action_page.php">
                     <label for="fname">X POS</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="xPos">
                 </form>
             </div>
         </div>
@@ -68,19 +68,19 @@
             <div class="col">
                 <form action="/action_page.php">
                     <label for="fname">VOLTS/DIV CH1</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="voltsCH1">
                 </form>
             </div>
             <div class="col">
                 <form action="/action_page.php">
                     <label for="fname">VOLTS/DIV CH2</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="voltsCH2">
                 </form>
             </div>
             <div class="col">
                 <form action="/action_page.php">
                     <label for="fname">TIME/DIV</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" name="time">
                 </form>
             </div>
         </div>
@@ -88,6 +88,7 @@
             <img src="/images/dev/entradas.png" alt="">
         </div>
     </div>
+    <script src="/js/index.js"></script>
 </body>
 </html>
 
