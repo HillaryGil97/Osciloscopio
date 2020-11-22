@@ -7,18 +7,9 @@ const Y = 410
 //sección de control
 const power = document.getElementsByName('power')
 const auto = document.getElementsByName('auto')
+const focus = document.getElementsByName('focus')
 
-//sección de posición
-const yPos1 = document.getElementsByName('yPos1')
-const yPos2 = document.getElementsByName('yPos2')
-const xPos = document.getElementsByName('xPos')
-
-//sección de propiedades
-const voltsCH1 = document.getElementsByName('voltsCH1')
-const voltsCH2 = document.getElementsByName('voltsCH2')
-const time = document.getElementsByName('time')
-
-var isClick=false;
+var isClick = false
 
 function gridBegin(){ //Función para dibujar las lineas de escala del osciloscopio
     for(let i=0;i<X;i=i+45){
@@ -37,12 +28,12 @@ function gridBegin(){ //Función para dibujar las lineas de escala del oscilosco
     }
 }
 
-function drawSin(frec, amp,des){
+function drawSin(frec, amp,des,intens,){
     for(let i=0;i<X;i=i+0.05){
         let ang = (Math.PI*i)/2
         let funY = amp*Math.sin((ang*frec) + des)+205
         ctx.beginPath();
-        ctx.arc(i,funY, 1, 0, Math.PI * 2, true)
+        ctx.arc(i,funY, intens, 0, Math.PI * 2, true)
         ctx.strokeStyle = 'rgb(255,0,0)'
         ctx.stroke();
     }
@@ -52,10 +43,22 @@ const startMe = () => {
     isClick = !isClick
     if(isClick){
         gridBegin()
-        drawSin(0.1,100,0)
+        focus[0].addEventListener('click',changeNivFocus)
     }else{
         canva.width=canva.width;
     }
 }
 
+const changeNivFocus = () => {
+    canva.width=canva.width;
+    gridBegin()
+    document.getElementById('imgFocus').style.transform = 'rotate(' + giro+ 'deg)'
+    drawSin(0.1,100,0,nivFocus)
+    giro=giro+10
+    nivFocus=nivFocus+0.02
+}
+var giro=0
+var nivFocus=0
 power[0].addEventListener('click',startMe)
+
+

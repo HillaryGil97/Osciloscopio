@@ -60,6 +60,30 @@ body {
   background-color: #a09a9a;
 }
 
+#control #ajusBasic .col {
+  width: 50%;
+}
+
+#control #ajusBasic .col #imgFocus {
+  width: 75px;
+  height: 75px;
+}
+
+#control #ajusBasic .col #imgInten {
+  width: 75px;
+  height: 75px;
+}
+
+#control #ajusBasic .col #power {
+  background-color: #861a1a;
+}
+
+#control #ajusBasic .col .buttonControl {
+  border: none;
+  width: 75px;
+  height: 75px;
+}
+
 #control #poSignal {
   display: -webkit-box;
   display: -ms-flexbox;
