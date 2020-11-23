@@ -6,6 +6,14 @@
     .row{
         padding: 2%;
     }
+    .perilla-pequeña{
+        width: 75px;
+        height: 75px;
+    }
+    .perilla-grande{
+        width: 100px;
+        height: 100px;
+    }
     #ajusBasic{
         display: flex;
         justify-content: space-around;
@@ -13,14 +21,6 @@
         background-color:$fondo_row;
         .col{
             width: 50%;
-            #imgFocus{
-                width: 75px;
-                height: 75px;
-            }
-            #imgInten{
-                width: 75px;
-                height: 75px;
-            }
             #power{
                 background-color: rgb(134, 26, 26);
             }
@@ -36,6 +36,17 @@
         justify-content: space-around;
         margin-bottom: 4%;
         background-color: $fondo_row;
+        .col{
+            width: 50%;
+            #power{
+                background-color: rgb(134, 26, 26);
+            }
+            .buttonControl{
+                border:none;
+                width: 75px;
+                height: 75px;
+            }
+        }
     }
     #properties{
         display: flex;

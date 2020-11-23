@@ -23,15 +23,41 @@
             </div>
             <div class="col" >
                 <label >Focus</label>
-                <input type="image" src="/images/dev/perilla.png" name="focus" id="imgFocus">
+                <input type="image" src="/images/dev/perilla.png" name="focus" id="imgFocus" class="perilla-pequeña">
                 <label >Intens</label>
-                <input type="image" src="/images/dev/perilla.png" name="intens" id="imgInten">
+                <input type="image" src="/images/dev/perilla.png" name="intens" id="imgInten" class="perilla-pequeña">
             </div>
         </div>
         <div class="row" id="poSignal">
+            <div class="col" id="posY">
+                <label for="fname">Y POS 1</label>
+                <input type="image" src="images/dev/perilla.png" name="yPos1" id="imgYPos1" class="perilla-pequeña">
+                <label for="fname">Y POS 2</label>
+                <input type="image" src="images/dev/perilla.png" name="yPos2" id="imgYPos2" class="perilla-pequeña">
+            </div>
+            <div class="col" id="posX">
+                <label for="fname">X POS</label>
+                <input type="image" src="images/dev/perilla.png" name="xPos" id="imgXPos" class="perilla-pequeña">
+            </div>
+        </div>
+        <div class="row" id="properties">
+            <div class="col">
+                <label for="fname">VOLTS/DIV CH1</label>
+                <input type="image" src="images/dev/perilla.png" name="voltsCH1" id="imgVoltsCH2" class="perilla-grande">
+            </div>
+            <div class="col">
+                <label for="fname">VOLTS/DIV CH2</label>
+                <input type="image" src="images/dev/perilla.png" name="voltsCH2" id="imgVoltsCH2" class="perilla-grande">
+            </div>
+            <div class="col">
+                <label for="fname">Timer</label>
+                <input type="image" src="images/dev/perilla.png" name="voltsCH2" id="imgVoltsCH2" class="perilla-pequeña">
+            </div>
+        </div>
+        <div class="row" id="conexion">
+            <img src="/images/dev/entradas.png" alt="">
         </div>
     </div>
     <script src="/js/index.js"></script>
-    <script src="/js/rotar.js"></script>
 </body>
 </html>

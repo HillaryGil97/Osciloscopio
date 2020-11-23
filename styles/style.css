@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +51,16 @@ body {
   padding: 2%;
 }
 
+#control .perilla-pequeña {
+  width: 75px;
+  height: 75px;
+}
+
+#control .perilla-grande {
+  width: 100px;
+  height: 100px;
+}
+
 #control #ajusBasic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,16 +73,6 @@ body {
 
 #control #ajusBasic .col {
   width: 50%;
-}
-
-#control #ajusBasic .col #imgFocus {
-  width: 75px;
-  height: 75px;
-}
-
-#control #ajusBasic .col #imgInten {
-  width: 75px;
-  height: 75px;
 }
 
 #control #ajusBasic .col #power {
@@ -92,6 +93,20 @@ body {
       justify-content: space-around;
   margin-bottom: 4%;
   background-color: #a09a9a;
+}
+
+#control #poSignal .col {
+  width: 50%;
+}
+
+#control #poSignal .col #power {
+  background-color: #861a1a;
+}
+
+#control #poSignal .col .buttonControl {
+  border: none;
+  width: 75px;
+  height: 75px;
 }
 
 #control #properties {
