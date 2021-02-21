@@ -5,59 +5,31 @@
     align-content: space-around;
     .row{
         padding: 2%;
+        background-color:$fondo_row;
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .col{
+        display: flex;
+        justify-content: space-around;
+        border: 2px solid $border_col;
+        border-radius: 10px;
+        margin: 1%;
+        padding: 2%;
     }
     .perilla-pequeña{
-        width: 75px;
-        height: 75px;
+        width: 10%;
+        height: auto;
     }
     .perilla-grande{
-        width: 100px;
-        height: 100px;
+        width: 20%;
+        height: auto;
     }
-    #ajusBasic{
+
+    article{
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 4%;
-        background-color:$fondo_row;
-        .col{
-            width: 50%;
-            #power{
-                background-color: rgb(134, 26, 26);
-            }
-            .buttonControl{
-                border:none;
-                width: 75px;
-                height: 75px;
-            }
-        }
-    }
-    #poSignal{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 4%;
-        background-color: $fondo_row;
-        .col{
-            width: 50%;
-            #power{
-                background-color: rgb(134, 26, 26);
-            }
-            .buttonControl{
-                border:none;
-                width: 75px;
-                height: 75px;
-            }
-        }
-    }
-    #properties{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 4%;
-        background-color: $fondo_row;
-    }
-    #conexion{
-        img{
-            width: 100%;
-            height: 100%;
-        }
+        flex-direction: column;
+        align-items: center;
     }
 }

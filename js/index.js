@@ -5,9 +5,9 @@ const X = 450
 const Y = 410
 
 //sección de control
-const power = document.getElementsByName('power')
-const auto = document.getElementsByName('auto')
-const focus = document.getElementsByName('focus')
+const power = document.getElementById('power')
+const auto = document.getElementById('auto')
+const focus = document.getElementById('focus')
 
 //sección de posicionamiento
 const yPos1 = document.getElementsByName('yPos1')
@@ -67,7 +67,7 @@ const startMe = () => {
     isClick = !isClick
     if(isClick){
         gridBegin()
-        focus[0].addEventListener('click',changeNivFocus)
+        focus.addEventListener('click',changeNivFocus)
         yPos1[0].addEventListener('click',changeDesY1)
         yPos2[0].addEventListener('click',changeDesY2)
         xPos[0].addEventListener('click',changeDesX)
@@ -161,6 +161,6 @@ var CH2 = {
     posY : 0,
     vol : 10 
 }
-power[0].addEventListener('click',startMe)
+power.addEventListener('click',startMe)
 
 

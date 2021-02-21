@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Osciloscopio</title>
@@ -11,53 +12,64 @@
         <div id="display">
             <canvas id="draw" width="450" height="410"></canvas>
         </div>
-        <div id="comproFunc">
-            <img src="/images/dev/funciones.png" alt="">
+        <div id="values">
+            <h3>Voltaje: </h3>
+            <h3>Frecuencia: </h3>
         </div>
     </div>
     <div class="container" id="control">
-        <div class="row" id="ajusBasic">
+        <div class="row">
             <div class="col">
-                <input name="power" type="submit" value="Power" class="buttonControl" id="power">
-                <input name="auto" type="submit" value="AutoSet" class="buttonControl">
+                <h4>Power</h4>
+                <h4>AutoSet</h4>
             </div>
-            <div class="col" >
-                <label >Focus</label>
-                <input type="image" src="/images/dev/perilla.png" name="focus" id="imgFocus" class="perilla-pequeña">
-                <label >Intens</label>
-                <input type="image" src="/images/dev/perilla.png" name="intens" id="imgInten" class="perilla-pequeña">
+            <div class="col">
+                <article>
+                    <h4>Focus</h4>
+                    <img src="images/dev/perilla.png" class="perilla-pequeña" alt="focus">
+                </article>
             </div>
         </div>
-        <div class="row" id="poSignal">
-            <div class="col" id="posY">
-                <label for="fname">Y POS 1</label>
-                <input type="image" src="images/dev/perilla.png" name="yPos1" id="imgYPos1" class="perilla-pequeña">
-                <label for="fname">Y POS 2</label>
-                <input type="image" src="images/dev/perilla.png" name="yPos2" id="imgYPos2" class="perilla-pequeña">
+        <div class="row">
+            <div class="col">
+                <article>
+                    <h4>PosY-CH1</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande"alt="posY-CH1">
+                </article>
+                <article>
+                    <h4>PosY-CH2</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande"alt="posY-CH2">
+                </article>
             </div>
-            <div class="col" id="posX">
-                <label for="fname">X POS</label>
-                <input type="image" src="images/dev/perilla.png" name="xPos" id="imgXPos" class="perilla-pequeña">
+            <div class="col">
+                <article>
+                    <h4>PosX</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande" alt="posX">
+                </article>
             </div>
         </div>
-        <div class="row" id="properties">
+        <div class="row">
             <div class="col">
-                <label for="fname">VOLTS/DIV CH1</label>
-                <input type="image" src="images/dev/perilla.png" name="voltsCH1" id="imgVoltsCH1" class="perilla-grande">
+                <article>
+                    <h4>Voltaje-CH1</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande" alt="voltajeCH1">
+                </article>
+                <article>
+                    <h4>Voltaje-CH1</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande" alt="voltajeCH1">
+                </article>
             </div>
             <div class="col">
-                <label for="fname">VOLTS/DIV CH2</label>
-                <input type="image" src="images/dev/perilla.png" name="voltsCH2" id="imgVoltsCH2" class="perilla-grande">
-            </div>
-            <div class="col">
-                <label for="fname">Timer</label>
-                <input type="image" src="images/dev/perilla.png" name="timer" id="imgTimer" class="perilla-pequeña">
+                <article>
+                    <h4>Timer</h4>
+                    <img src="images/dev/perilla.png" class="perilla-grande" alt="timer">
+                </article>
             </div>
         </div>
-        <div class="row" id="conexion">
-            <img src="/images/dev/entradas.png" alt="">
+        <div class="row">
+            <img src="images/dev/entradas.png" alt="">
         </div>
     </div>
-    <script src="/js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
