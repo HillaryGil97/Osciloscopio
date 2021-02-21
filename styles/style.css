@@ -49,78 +49,47 @@ body {
 
 #control .row {
   padding: 2%;
+  background-color: #a09a9a;
+  margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#control .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #c3baba;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 2%;
 }
 
 #control .perilla-pequeña {
-  width: 75px;
-  height: 75px;
+  width: 10%;
+  height: auto;
 }
 
 #control .perilla-grande {
-  width: 100px;
-  height: 100px;
+  width: 20%;
+  height: auto;
 }
 
-#control #ajusBasic {
+#control article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 4%;
-  background-color: #a09a9a;
-}
-
-#control #ajusBasic .col {
-  width: 50%;
-}
-
-#control #ajusBasic .col #power {
-  background-color: #861a1a;
-}
-
-#control #ajusBasic .col .buttonControl {
-  border: none;
-  width: 75px;
-  height: 75px;
-}
-
-#control #poSignal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 4%;
-  background-color: #a09a9a;
-}
-
-#control #poSignal .col {
-  width: 50%;
-}
-
-#control #poSignal .col #power {
-  background-color: #861a1a;
-}
-
-#control #poSignal .col .buttonControl {
-  border: none;
-  width: 75px;
-  height: 75px;
-}
-
-#control #properties {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 4%;
-  background-color: #a09a9a;
-}
-
-#control #conexion img {
-  width: 100%;
-  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
