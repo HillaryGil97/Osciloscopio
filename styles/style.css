@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 5% auto;
+  margin: 1% auto;
   background-color: #5e5757;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +71,7 @@ body {
 }
 
 #control .perilla-pequeña {
-  width: 10%;
+  width: 15%;
   height: auto;
 }
 
@@ -91,5 +91,59 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#start {
+  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#start h4 {
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 4%;
+}
+
+#start #power {
+  background-color: #8b0b0b;
+  color: #c5c5c5;
+}
+
+#start #power:hover {
+  background-color: #740909;
+  color: white;
+}
+
+#start #auto {
+  background-color: #dadada;
+  color: #252525;
+}
+
+#start #auto:hover {
+  background-color: white;
+  color: black;
+}
+
+.channel {
+  width: 40%;
+}
+
+.channel article {
+  width: 80%;
+}
+
+.channel article h4 {
+  margin-bottom: 2%;
+}
+
+.channel article a {
+  width: 30%;
+  height: auto;
+  padding: 2%;
+  background-color: red;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@
         padding: 2%;
     }
     .perilla-pequeña{
-        width: 10%;
+        width: 15%;
         height: auto;
     }
     .perilla-grande{
@@ -31,5 +31,49 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+#start{
+    width: 70%;
+    align-items: center;
+    h4{
+        width: 30%;
+        height: auto;
+        text-align: center;
+        padding: 4%;
+    }
+    #power{
+        background-color: rgb(139, 11, 11);
+        color: rgb(197, 197, 197);
+        &:hover{
+            background-color: rgb(116, 9, 9);
+            color: white;
+        }
+    }
+    #auto{
+        background-color: rgb(218, 218, 218);
+        color: rgb(37, 37, 37);
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }   
+}
+
+.channel{
+    width: 40%;
+    article{
+       width: 80%;
+       h4{
+           margin-bottom: 2%;
+       }
+        a{
+            width: 30%;
+            height: auto;
+            padding: 2%;
+            background-color: red;
+            text-align: center;
+        }
     }
 }
