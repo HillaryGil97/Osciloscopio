@@ -31,3 +31,8 @@ export function drawSin(frec,amp,desX, desY, intens, color){//función para dibu
         ctx.stroke();
     }
 }
+
+export function drawSignals(valTimer,CH1,CH2,xPosition,nivFocus){
+    drawSin(valTimer,CH1.vol,xPosition,CH1.posY,nivFocus,CH1.color)
+    drawSin(valTimer,CH2.vol,xPosition,CH2.posY,nivFocus,CH2.color)
+}
