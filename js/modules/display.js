@@ -21,7 +21,7 @@ export function gridBegin(){ //Función para dibujar las lineas de escala del os
     }
 }
 
-export function drawSin(frec,amp,desX, desY, intens, color){//función para dibujar una senoidal
+function drawSin(frec,amp,desX, desY, intens, color){//función para dibujar una senoidal
     for(let i=0;i<X;i=i+0.05){
         let ang = (Math.PI*i)/2
         let funY = amp*Math.sin((ang*frec) + desX)+205+desY
@@ -33,6 +33,7 @@ export function drawSin(frec,amp,desX, desY, intens, color){//función para dibu
 }
 
 export function drawSignals(valTimer,CH1,CH2,xPosition,nivFocus){
+    gridBegin()
     drawSin(valTimer,CH1.vol,xPosition,CH1.posY,nivFocus,CH1.color)
     drawSin(valTimer,CH2.vol,xPosition,CH2.posY,nivFocus,CH2.color)
 }
