@@ -15,7 +15,7 @@ export var configOsci = {
 
         //los botones de valores 
     },
-    giro : [0,0,0,0,0,0,0],
+    giro : [0,0,0,0,0,0,0], //orden [focus, yPos1, yPos2, XPos,volCH1,volCH2,timer]
     xPosition : 0,
     valTimer : 0.2,
     nivFocus : 0,

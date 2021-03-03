@@ -32,9 +32,6 @@ function reset(){//Función para resetear todos los valores importantes del osci
 
 export function changeNivFocus(){//Función para aumentar el focus del osciloscopio
     if(!configOsci.clickPower){
-        canva.width=canva.width;
-        document.getElementById('focus').style.transform = 'rotate(' + configOsci.giro[0]+ 'deg)'
-        drawSignals(configOsci.valTimer,configOsci.CH1,configOsci.CH2,configOsci.xPosition,configOsci.nivFocus)
         configOsci.giro[0] = configOsci.giro[0] + 10
         if(configOsci.nivFocus < 0.5)// nivFocus va a llegar solo hasta 0.5 y se regresará a 0 para volverlo a incrementar
             configOsci.nivFocus = configOsci.nivFocus + 0.02
@@ -42,5 +39,8 @@ export function changeNivFocus(){//Función para aumentar el focus del oscilosco
             configOsci.nivFocus = 0
             configOsci.giro[0] = 0
         }
+        canva.width=canva.width;
+        document.getElementById('focus').style.transform = 'rotate(' + configOsci.giro[0]+ 'deg)'
+        drawSignals(configOsci.valTimer,configOsci.CH1,configOsci.CH2,configOsci.xPosition,configOsci.nivFocus)
     }
 }
