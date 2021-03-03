@@ -13,7 +13,10 @@ export var configOsci = {
         posYCH2 : document.getElementById('yPos2'),
         posX : document.getElementById('xPos'),
 
-        //los botones de valores 
+        //los botones de valores
+        volCH1 : document.getElementById('volCH1'),
+        volCH2 : document.getElementById('volCH2'),
+        timer : document.getElementById('timer'),
     },
     giro : [0,0,0,0,0,0,0], //orden [focus, yPos1, yPos2, XPos,volCH1,volCH2,timer]
     xPosition : 0,

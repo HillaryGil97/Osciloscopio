@@ -42,7 +42,6 @@ export function changeXPosition(){
             configOsci.giro[3] = 0
             configOsci.xPosition = 225
         }
-        console.log(configOsci.xPosition)
         canva.width=canva.width;
         gridBegin()
         document.getElementById('xPos').style.transform = 'rotate(' + configOsci.giro[3]+ 'deg)'

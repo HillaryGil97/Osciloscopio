@@ -1,5 +1,6 @@
 import {canva, gridBegin, drawSignals} from "./display.js"
 import {changeYPosCH1,changeYPosCH2,changeXPosition} from "./position.js"
+import {changeVolCH1, changeVolCH2, changeTimer} from "./values.js"
 import {configOsci} from "../index.js"
 
 export function startMe(){ //Función incial que llama a todos los demás eventos
@@ -10,6 +11,9 @@ export function startMe(){ //Función incial que llama a todos los demás evento
         configOsci.botones.posYCH1.addEventListener('click',changeYPosCH1)
         configOsci.botones.posYCH2.addEventListener('click',changeYPosCH2)
         configOsci.botones.posX.addEventListener('click',changeXPosition)
+        configOsci.botones.volCH1.addEventListener('click',changeVolCH1)
+        configOsci.botones.volCH2.addEventListener('click',changeVolCH2)
+        configOsci.botones.timer.addEventListener('click',changeTimer)
     }else{
         reset()        
     }
