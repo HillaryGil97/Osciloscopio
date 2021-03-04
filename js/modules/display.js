@@ -34,6 +34,12 @@ function drawSin(frec,amp,desX, desY, intens, color){//función para dibujar una
 
 export function drawSignals(valTimer,CH1,CH2,xPosition,nivFocus){
     gridBegin()
-    drawSin(valTimer,CH1.vol,xPosition,CH1.posY,nivFocus,CH1.color)
-    drawSin(valTimer,CH2.vol,xPosition,CH2.posY,nivFocus,CH2.color)
+    if(CH1.ban){
+        drawSin(valTimer,CH1.vol,xPosition,CH1.posY,nivFocus,CH1.color)
+    }
+    if(CH2.ban){
+        drawSin(valTimer,CH2.vol,xPosition,CH2.posY,nivFocus,CH2.color)
+    }
+    
+    
 }

@@ -17,6 +17,10 @@ export var configOsci = {
         volCH1 : document.getElementById('volCH1'),
         volCH2 : document.getElementById('volCH2'),
         timer : document.getElementById('timer'),
+
+        //los botones de activación de canales
+        CH1 : document.getElementById('CH1'),
+        CH2 : document.getElementById('CH2')
     },
     giro : [0,0,0,0,0,0,0], //orden [focus, yPos1, yPos2, XPos,volCH1,volCH2,timer]
     xPosition : 0,

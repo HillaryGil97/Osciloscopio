@@ -43,7 +43,6 @@ export function changeTimer(){
             configOsci.valTimer= 0.2
         }
         canva.width=canva.width;
-        console.log(configOsci.valTimer)
         gridBegin()
         document.getElementById('timer').style.transform = 'rotate(' + configOsci.giro[6]+ 'deg)'
         drawSignals(configOsci.valTimer,configOsci.CH1,configOsci.CH2,configOsci.xPosition,configOsci.nivFocus)
