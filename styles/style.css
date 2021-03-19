@@ -129,7 +129,17 @@ body {
   width: 80%;
 }
 
+.channel article #red {
+  background-color: red;
+}
+
+.channel article #blue {
+  background-color: blue;
+}
+
 .channel article h4 {
+  color: #cfcfcf;
+  padding: 5px;
   margin-bottom: 2%;
 }
 

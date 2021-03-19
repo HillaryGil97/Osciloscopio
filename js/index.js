@@ -28,13 +28,13 @@ export var configOsci = {
     nivFocus : 0,
     CH1 : {
         ban : false,
-        color : 'rgb(255,0,0)',
+        color : 'rgb(255, 0, 0)',
         posY : 0,
         vol : 10
     },
     CH2 : {
         ban : false,
-        color : 'rgb(0,0,255)',
+        color : 'rgb(0, 0, 255)',
         posY : 0,
         vol : 10 
     }

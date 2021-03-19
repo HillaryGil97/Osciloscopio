@@ -61,7 +61,15 @@
     width: 40%;
     article{
        width: 80%;
+       #red{
+        background-color: red;
+       }
+       #blue{
+           background-color: blue;
+       }
        h4{
+           color: rgb(207, 207, 207);
+           padding: 5px;
            margin-bottom: 2%;
        }
         a{
