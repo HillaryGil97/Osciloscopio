@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +12,25 @@
         <div id="display">
             <canvas id="draw" width="450" height="410"></canvas>
         </div>
-        <div id="values">
-            <h3>Voltage: </h3>
-            <h3>Frecuencia: </h3>
+        <div class="row" id="values">
+            <div class="col">
+                <article>
+                    <h3>Voltage-CH1</h3>
+                    <p class="scale">5</p>
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <h3>Voltage-CH2</h3>
+                    <p class="scale">5</p>
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <h3>Time/div</h3>
+                    <p class="scale">5</p>
+                </article>
+            </div>
         </div>
     </div>
     <div class="container" id="control">
@@ -61,7 +77,7 @@
             </div>
             <div class="col">
                 <article>
-                    <h4>Timer</h4>
+                    <h4>Time/div</h4>
                     <img id="timer" src="images/dev/perilla.png" class="perilla" alt="timer">
                 </article>
             </div>

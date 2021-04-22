@@ -38,15 +38,7 @@ body {
   height: 100%;
 }
 
-#control {
-  padding: 1%;
-  width: 60%;
-  background-color: #807575;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-}
-
-#control .row {
+.row {
   padding: 2%;
   background-color: #a09a9a;
   margin-bottom: 2%;
@@ -57,7 +49,7 @@ body {
       justify-content: space-around;
 }
 
-#control .col {
+.col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,12 +61,7 @@ body {
   padding: 2%;
 }
 
-#control .perilla {
-  width: 20%;
-  height: auto;
-}
-
-#control article {
+article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +72,28 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+article .scale {
+  font-size: medium;
+  text-align: center;
+  margin-top: 15px;
+  padding: 5px;
+  width: 80%;
+  background-color: white;
+}
+
+#control {
+  padding: 1%;
+  width: 60%;
+  background-color: #807575;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+#control .perilla {
+  width: 20%;
+  height: auto;
 }
 
 #start {

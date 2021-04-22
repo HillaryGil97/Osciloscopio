@@ -1,32 +1,41 @@
+.row{
+    padding: 2%;
+    background-color:$fondo_row;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+.col{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid $border_col;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 2%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .scale{
+        font-size: medium;
+        text-align: center;
+        margin-top: 15px;
+        padding: 5px;
+        width: 80%;
+        background-color: white;
+    }
+}
+
 #control{
     padding: 1%;
     width: 60%;
     background-color: $fondo_container;
     align-content: space-around;
-    .row{
-        padding: 2%;
-        background-color:$fondo_row;
-        margin-bottom: 2%;
-        display: flex;
-        justify-content: space-around;
-    }
-    .col{
-        display: flex;
-        justify-content: space-around;
-        border: 2px solid $border_col;
-        border-radius: 10px;
-        margin: 1%;
-        padding: 2%;
-    }
     .perilla{
         width: 20%;
         height: auto;
-    }
-
-    article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -56,6 +65,8 @@
         }
     }   
 }
+
+
 
 .channel{
     width: 40%;

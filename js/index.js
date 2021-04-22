@@ -30,13 +30,13 @@ export var configOsci = {
         ban : false,
         color : 'rgb(255, 0, 0)',
         posY : 0,
-        vol : 10
+        vol : 41*(1/20)
     },
     CH2 : {
         ban : false,
         color : 'rgb(0, 0, 255)',
         posY : 0,
-        vol : 10 
+        vol : 1 
     }
 }
 
