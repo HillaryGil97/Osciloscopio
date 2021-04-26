@@ -1,59 +1,55 @@
 import {canva, gridBegin, drawSignals} from "./display.js"
 import {configOsci} from "../index.js"
+const scaleCH1 = document.getElementById('scaleCH1')
 
 export function changeVolCH1(){
     let voltage = 41;
     if(!configOsci.clickPower){
-        console.log(`${configOsci.giro[4]}= ${configOsci.CH1.vol}`)
-        switch (configOsci.giro[4]){
-            case 0:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage*(1/10);
+        switch (configOsci.CH1.vol){
+            case voltage * (1/20):
+                configOsci.giro[4] = 22.5
+                configOsci.CH1.vol = voltage * (1/10)
+                scaleCH1.innerHTML = '10 [V]'
             break;
-            case 20:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage*(1/5);
-                //console.log(`voltaje 10= ${configOsci.CH1.vol}`)
+            case voltage * (1/10):
+                configOsci.giro[4] = 45
+                configOsci.CH1.vol = voltage * (1/5)
+                scaleCH1.innerHTML = '5 [V]'
             break;
-            case 40:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage*(1/2);
-                //console.log(`voltaje 5= ${configOsci.CH1.vol}`)
+            case voltage * (1/5):
+                configOsci.giro[4] = 67.5
+                configOsci.CH1.vol = voltage * (1/2)
+                scaleCH1.innerHTML = '2 [V]'
             break;
-            case 60:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage;
-                //console.log(`voltaje 2= ${configOsci.CH1.vol}`)
+            case voltage * (1/2):
+                configOsci.giro[4] = 90
+                configOsci.CH1.vol = voltage
+                scaleCH1.innerHTML = '1 [V]'
             break;
-            case 80:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage * 2;
-                //console.log(`voltaje 1= ${configOsci.CH1.vol}`)
+            case voltage:
+                configOsci.giro[4] = 112.5
+                configOsci.CH1.vol = voltage * 2
+                scaleCH1.innerHTML = '0.5 [V]'
             break;
-            case 100:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage * 5;
-                //console.log(`voltaje 0.5= ${configOsci.CH1.vol}`)
+            case voltage * 2:
+                configOsci.giro[4] = 135
+                configOsci.CH1.vol = voltage * 5
+                scaleCH1.innerHTML = '200 [mV]'
             break;
-            case 120:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage * 10;
-                //console.log(`voltaje 200m= ${configOsci.CH1.vol}`)
+            case voltage * 5:
+                configOsci.giro[4] = 157.5
+                configOsci.CH1.vol = voltage * 10
+                scaleCH1.innerHTML = '100 [mV]'
             break;
-            case 140:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage * 20;
-                //console.log(`voltaje 100m= ${configOsci.CH1.vol}`)
+            case voltage * 10:
+                configOsci.giro[4] = 180
+                configOsci.CH1.vol = voltage * 20
+                scaleCH1.innerHTML = '50 [mV]'
             break;
-            case 160:
-                configOsci.giro[4] = configOsci.giro[4] + 20
-                configOsci.CH1.vol= voltage * 1/50;
-                //console.log(`voltaje 50m= ${configOsci.CH1.vol}`)
-            break;
-            case 180:
+            default:
                 configOsci.giro[4] = 0
-                configOsci.CH1.vol= 41*(1/20);
-                //console.log(`voltaje 50m= ${configOsci.CH1.vol}`)
+                configOsci.CH1.vol = voltage*(1/20)
+                scaleCH1.innerHTML = '20 [V]'
             break;
         }
         canva.width=canva.width;
