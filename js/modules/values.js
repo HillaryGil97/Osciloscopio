@@ -1,8 +1,9 @@
 import {canva, gridBegin, drawSignals} from "./display.js"
 import {configOsci} from "../index.js"
 const scaleCH1 = document.getElementById('scaleCH1')
+const scaleTimer = document.getElementById('scaleTimer')
 
-export function changeVolCH1(){
+export function changeVolCH1(){ //FUNCIÓN DE CAMBIO DE VOLTAJE DEL CANAL 1
     let voltage = 41;
     if(!configOsci.clickPower){
         switch (configOsci.CH1.vol){
@@ -76,14 +77,55 @@ export function changeVolCH2(){
 }
 
 export function changeTimer(){
-    if(!configOsci.clickPower){
-        if(configOsci.valTimer > 0){
-            configOsci.giro[6] = configOsci.giro[6] + 10 
-            configOsci.valTimer = configOsci.valTimer - 0.01;
-        }else{
+    let Frec = 0.09;
+    switch (configOsci.valTimer){
+        case Frec * 5:
+            configOsci.giro[6] = 22.5
+            configOsci.valTimer = Frec * 2
+            scaleTimer.innerHTML = '2 [ms]'
+        break;
+        case Frec * 2:
+            configOsci.giro[6] = 45
+            configOsci.valTimer = Frec
+            scaleTimer.innerHTML = '1 [ms]'
+        break;
+        case Frec:
+            configOsci.giro[6] = 67.5
+            configOsci.valTimer = Frec / 2
+            scaleTimer.innerHTML = '0.5 [ms]'
+        break;
+        case Frec / 2:
+            configOsci.giro[6] = 90
+            configOsci.valTimer = Frec / 5
+            scaleTimer.innerHTML = '0.2 [ms]'
+        break;
+        case Frec / 5:
+            configOsci.giro[6] = 112.5
+            configOsci.valTimer = Frec / 10
+            scaleTimer.innerHTML = '0.1 [ms]'
+        break;
+        case Frec / 10:
+            configOsci.giro[6] = 135
+            configOsci.valTimer = Frec / 20
+            scaleTimer.innerHTML = '50 [µs]'
+        break;
+        case Frec / 20:
+            configOsci.giro[6] = 157.5
+            configOsci.valTimer = Frec / 50
+            scaleTimer.innerHTML = '20 [µs]'
+        break;
+        case Frec / 50:
+            configOsci.giro[6] = 180
+            configOsci.valTimer = Frec / 100
+            scaleTimer.innerHTML = '10 [µs]'
+        break;
+        default:
             configOsci.giro[6] = 0
-            configOsci.valTimer= 0.2
-        }
+            configOsci.valTimer = Frec * 5
+            scaleTimer.innerHTML = '5 [ms]'
+        break;
+    }
+    if(!configOsci.clickPower){
         canva.width=canva.width;
         gridBegin()
         document.getElementById('timer').style.transform = 'rotate(' + configOsci.giro[6]+ 'deg)'

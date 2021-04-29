@@ -24,6 +24,7 @@ export function gridBegin(){ //Función para dibujar las lineas de escala del os
 function drawSin(frec,amp,desX, desY, intens, color){//función para dibujar una senoidal
     for(let i=0;i<X;i=i+0.05){
         let ang = (Math.PI*i)/2
+        console.log(ang)
         let funY = amp*Math.sin((ang*frec) + desX)+205+desY
         ctx.beginPath();
         ctx.arc(i,funY, intens, 0, Math.PI * 2, true)

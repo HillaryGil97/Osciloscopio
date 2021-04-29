@@ -24,7 +24,7 @@ export var configOsci = {
     },
     giro : [0,0,0,0,0,0,0], //orden [focus, yPos1, yPos2, XPos,volCH1,volCH2,timer]
     xPosition : 0,
-    valTimer : 0.2,
+    valTimer : 0.09 * 5,
     nivFocus : 0,
     CH1 : {
         ban : false,
