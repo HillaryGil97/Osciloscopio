@@ -35,7 +35,7 @@ export var configOsci = {
     CH2 : {
         ban : false,
         color : 'rgb(0, 0, 255)',
-        posY : 0,
+        posY :205,
         vol : 1 
     }
 }

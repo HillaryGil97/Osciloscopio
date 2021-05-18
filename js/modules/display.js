@@ -41,11 +41,10 @@ export function drawSignals(valTimer,CH1,CH2,xPosition,nivFocus){
     }
     if(CH2.ban){
         ctx.beginPath()
-        ctx.moveTo(0,205 + configOsci.CH2.posY)
-        ctx.lineTo(450,205 + configOsci.CH2.posY)
+        ctx.moveTo(0, configOsci.CH2.posY)
+        ctx.lineTo(450, configOsci.CH2.posY)
         ctx.strokeStyle = CH2.color
         ctx.stroke()
         console.log('simon :v')
     }
-    
 }
