@@ -1,6 +1,7 @@
 import {canva, gridBegin, drawSignals} from "./display.js"
 import {configOsci} from "../index.js"
 const scaleCH1 = document.getElementById('scaleCH1')
+const scaleCH2 = document.getElementById('scaleCH2')
 const scaleTimer = document.getElementById('scaleTimer')
 
 export function changeVolCH1(){ //FUNCIÓN DE CAMBIO DE VOLTAJE DEL CANAL 1
@@ -61,13 +62,54 @@ export function changeVolCH1(){ //FUNCIÓN DE CAMBIO DE VOLTAJE DEL CANAL 1
 }
 
 export function changeVolCH2(){
+    let voltage = 41
     if(!configOsci.clickPower){
-        if(configOsci.giro[5] < 180){
-            console.log(configOsci.giro[5])
-            
-        }else{
-            configOsci.giro[5] = 0
-            configOsci.CH2.vol= 1
+        switch(configOsci.CH2.scale){
+            case voltage * (1/20):
+                configOsci.giro[5] = 22.5
+                configOsci.CH2.scale = voltage * (1/10)
+                scaleCH2.innerHTML = '10 [V]'
+            break;
+            case voltage * (1/10):
+                configOsci.giro[5] = 45
+                configOsci.CH2.scale = voltage * (1/5)
+                scaleCH2.innerHTML = '5 [V]'
+            break;
+            case voltage * (1/5):
+                configOsci.giro[5] = 67.5
+                configOsci.CH2.scale = voltage * (1/2)
+                scaleCH2.innerHTML = '2 [V]'
+            break;
+            case voltage * (1/2):
+                configOsci.giro[5] = 90
+                configOsci.CH2.scale = voltage
+                scaleCH2.innerHTML = '1 [V]'
+            break;
+            case voltage:
+                configOsci.giro[5] = 112.5
+                configOsci.CH2.scale = voltage * 2
+                scaleCH2.innerHTML = '0.5 [V]'
+            break;
+            case voltage * 2:
+                configOsci.giro[5] = 135
+                configOsci.CH2.scale = voltage * 5
+                scaleCH2.innerHTML = '200 [mV]'
+            break;
+            case voltage * 5:
+                configOsci.giro[5] = 157.5
+                configOsci.CH2.scale = voltage * 10
+                scaleCH2.innerHTML = '100 [mV]'
+            break;
+            case voltage * 10:
+                configOsci.giro[5] = 180
+                configOsci.CH2.scale = voltage * 20
+                scaleCH2.innerHTML = '50 [mV]'
+            break;
+            default:
+                configOsci.giro[5] = 0
+                configOsci.CH2.scale = voltage*(1/20)
+                scaleCH2.innerHTML = '20 [V]'
+            break;
         }
         canva.width=canva.width;
         gridBegin()

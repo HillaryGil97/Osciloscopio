@@ -19,15 +19,14 @@ export function changeYPosCH1(){
 
 export function changeYPosCH2(){
     if(!configOsci.clickPower){
-        console.log(configOsci.CH2.posY)
-        if(configOsci.CH2.posY > 0){
+        console.log(configOsci.CH2.vol)
+        if(configOsci.CH2.vol < 50){
             configOsci.giro[2] = configOsci.giro[2] + 10
-            configOsci.CH2.posY -= 5
+            configOsci.CH2.vol ++
         }else{
             configOsci.giro[2] = 0
-            configOsci.CH2.posY = 205
+            configOsci.CH2.vol = 1
         }
-        
         canva.width=canva.width;
         gridBegin()
         document.getElementById('yPos2').style.transform = 'rotate(' + configOsci.giro[2]+ 'deg)'

@@ -74,6 +74,10 @@ article {
           align-items: center;
 }
 
+article h3 {
+  text-align: center;
+}
+
 article .scale {
   font-size: medium;
   text-align: center;
